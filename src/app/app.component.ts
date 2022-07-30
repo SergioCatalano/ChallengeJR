@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DynamicDataService } from './services/dynamic-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'challengejr';
+  initialData: string[] = [];
+
+  constructor(private data: DynamicDataService) {
+    this.initialData = this.data.rootLevelNodes.slice();
+  }
+
 }
