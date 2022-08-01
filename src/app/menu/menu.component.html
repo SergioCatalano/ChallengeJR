@@ -1,8 +1,8 @@
-<button *ngIf="isRootNode" mat-button [matMenuTriggerFor]="menu">
+<button *ngIf="isRootLevel" mat-button [matMenuTriggerFor]="menu">
   {{ trigger }}
 </button>
 <button
-  *ngIf="!isRootNode"
+  *ngIf="!isRootLevel"
   mat-menu-item
   [matMenuTriggerFor]="menu"
   (menuOpened)="getData(trigger)"

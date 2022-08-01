@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   @Input() data: string[] = [];
   @Input() trigger = "Trigger";
-  @Input() isRootNode = false;
+  @Input() isRootLevel = false;
 
   isLoading = false;
   dataLoaded = false;

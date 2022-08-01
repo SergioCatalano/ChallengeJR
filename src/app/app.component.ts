@@ -11,7 +11,7 @@ export class AppComponent {
   initialData: string[] = [];
 
   constructor(private data: DynamicDataService) {
-    this.initialData = this.data.rootLevelNodes.slice();
+    this.initialData = this.data.firstLevel.slice();
   }
 
 }

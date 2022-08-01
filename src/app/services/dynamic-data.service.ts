@@ -16,14 +16,14 @@ export class DynamicDataService {
     ["Fruta",["Sin grasa"]],
   ]);
 
-  rootLevelNodes: string[] = ["Bebidas", "Comidas", "Limpieza"];
+  firstLevel: string[] = ["Bebidas", "Comidas", "Limpieza"];
 
-  getChildren(node: string) {
-    return of(this.dataMap.get(node));
+  getChildren(children: string) {
+    return of(this.dataMap.get(children));
   }
 
-  isExpandable(node: string): boolean {
-    return this.dataMap.has(node);
+  isExpandable(children: string): boolean {
+    return this.dataMap.has(children);
   }
 
   constructor() { }
